@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Js</title>
+
+	<!--
+
+	Curso de node.js (30 Videos) | https://www.youtube.com/playlist?list=PL38CA7BD8CB5F3FF9
+
+	Tutorial: 01.- Curso de node.js. Introducción a node.js | https://www.youtube.com/watch?v=vnRGAsZdhx0&list=PL38CA7BD8CB5F3FF9
+
+	Página Oficial: 
+
+		https://nodejs.org/es/
+
+		Acceder ha Nodejs
+
+			cd\
+
+				cd program files\nodejs\node
+
+
+	Alternativas de Nodejs:
+
+		_"https://iojs.org/es/" //alternativa ha nodejs
+
+		_"http://socket.io/" //alternativa ha ajax
+
+
+	NPM
+
+		https://docs.npmjs.com/
+		https://docs.npmjs.com/cli/install
+
+	Express
+
+		http://expressjs.com/es/
+
+		Consolidate Express (plantillas)
+
+			https://github.com/tj/consolidate.js/
+
+
+
+
+	Definición de Node Js:
+	______________________
+
+	_Node.js® es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Node.js usa un modelo de operaciones E/S sin bloqueo y orientado a eventos, que lo hace liviano y eficiente. El ecosistema de paquetes de Node.js, npm, es el ecosistema mas grande de librerías de código abierto en el mundo.
+
+
+	_node js, es una tecnología que está orientada ha aplicaciones que se ejecutan en el navegador
+
+	_y tiene el ibjetivo a largo plazo de convertir el navegador web, en el próximo sistema operativo con un sin número de aplicaciones y funcionalidades extensibles
+
+	_javascript, es un lenguaje de programación intepretado y ejecutado en el cliente ó navegador lo cuál, está cambiando node js, al permitir la integración e interación de javascript, ahora del lado del servidor web
+
+
+
+	Características Relevantes de Node Js:
+	______________________________________
+
+	_la concurrencia es una de la más notables la cuál, permite hacer varias cosas a la vez
+
+	_de ésta manera, ahora se podrá realizar más cosas utilizando menos lenguajes, ya que ahora node js, ahora trabajarán tanto del lado del cliente como del lado del servidor
+
+	_así, como también, permitirá la concurrencia de más usuarios interactuando con el sistema a la vez
+
+	_de ésta manera, noje js, es más rápido, ediciente y hace un uso más eficiente de la memoria del sistema
+
+	_nodejs, funciona de forma asincrónica lo que quiere decir que cualquier cambio que ocurra del lado del cliente nodejs, lo actualizarán sin tener que recargar la página así, nodejs, mantendrá una comunicación constante y sostenidica con el navegador web
+
+	_nodejs, soporta protocolos "TCP", "DNS", y "HTTP", y "HTTPS"
+
+	_nodejs, nos sirve para acceder a la información en tiempo real distribuida, así, tenemos un oficina en Santiago y otra en Japón y otra en Australia; y si acceso ó modifico un dato en Santiago, automáticamente éste dato se actualizará en los demás lugares en tiempo real sin recargar el navegador
+
+	_también, permite la creación de aplicaciones pequeñas de alta disponibilidad que comuniquen en tiempo real a través, de notificaicones cambios en una página web
+
+	_nodejs, nos sirve también, para creación de APIS, de comunicación externa de lenguajes de alto nivel con terceros
+
+	_nodejs, también, nos permite la creación de "streaming data", de audio y video e informaicón
+
+	
+
+	No es viable:
+	_____________
+
+	_nodejs, no es viable para creación de portales web
+
+	_nodejs, no es recomendable para hacer páginas estáticas
+
+	_nodejs, no es coremendable para creación de software transaccional 
+
+		_de ésta manera, se entiende que nodejs, nació para envío de información únicamnete
+
+		_no para la recepción y procesamiento interno de datos
+
+
+
+	Nodejs Composición Interna:
+	___________________________
+
+	_nodejs, dispone de la librería MVC (Bomber)
+
+	_nodejs, dispone del framework "Express", el cuál, nos permite la creación de herramientas de forma mucho más rápido
+
+	_nodejs, se basa sobre el core, de javascript, que manaja google chrome, "V8"
+
+	_nodejs, todo lo que hagamos en nodejs, es portable, de ésta manera, podremos portar el código que desarrollemos ha windows, mac, linus, otros
+
+
+
+	Arquitectura Base:
+	__________________
+
+	_nodejs, tiene como base el motor de javascript "V8"
+
+	_nodejs, tiene como base la librería "Libeio", librería basada en eventos, de ésta manera, al ejecutarse un evento, nodejs, ejecutará una acción a partir de éste evento
+
+		_éste método lo permite eliminar los tiempos de espera al realizar las tareas 
+
+			_lo que quiere decir, que nodejs, puede estar haciendo una consulta sql, mientras esta haciendo a la vez, nos podemos estar conectando con un web servise
+
+			_sin que tenga que haber terminado un proceso para poder comenzar y terminar con el otro proceso respectovo de forma asíncrona
+
+	_nodejs, tiene como base la liebrería "libev", librería basada en el manejo de eventos 
+
+		_a través, de la cuál, podremos repetir un eventos muchas veces, mientras que a su vez, podremos realizar otro proceso más abajo de éste
+
+		_lo que quiere decir que por ejemplo podríamos etar ejecutando un ciclo "for", y por debajo un ciclo "while", sin que uno afecte al otro
+
+	_nodejs, tiene como base la librería "openssl", ésta nos permitirá hacer transferencias de modo seguro sin la necesidad de tener una persona entre medio
+
+	_nodejs, tiene como base la librería "DNS", ésta nos permitirá la creación de consultas dns, de forma asíncrona y poder resolver múltiples peticiones sin que se efecte el procceso general de la aplicación ó sistema
+
+	
+
+
+	Utilidades de Node Js:
+	______________________
+
+	_Google, ha desarrollado "V8", un motor javascript, para el navegaodr web google chrome, el cuál, es extremadamente rápido
+
+	_y de ésta manera, los creadores de node js, han utilizado éste motor "V8", javascript, de google chrome, para crear un entorno de desarrollo javascript, del lado del servidor web, y dirigido ha eventos
+
+	_ésto significa que podemos crear aplicaciones del lado del servidor con javascript, del mismo que lo podríamos hacer con lenguajes como php, python, ruby, otros
+
+	_de ésta manera, node js, es un framework, de programación, de ésta manera, sólo estaremos limitados por nuestra imaginación y por nuestras habilidades como programadores
+
+	_de ésta manera, podremos crear un script, para gestinar y hacer algo en específico en un sistema de archivos ó completas aplicaciones web, ha gran escala para realizar negocios enteros a través, de sistema complejos
+
+	_por el modo como está implementado node js, es idóneo para todo lo que tiene que ver con intercomunicación a gran escala por ejemplo:
+
+		_servidores de mensajería
+
+		_juegos multijugador
+
+		_ó cualquier otro sistema en tiempo real de alto rendimiento y "Cloud Computting"
+
+
+
+	Instalar Node Js:
+	_________________
+
+	_para lo cuál, requerimos la instalación del motor de Node Js
+
+	_así, como también, el "NPM", ó "node package manager"
+
+	_de ésta manera, para activar node js, debemos ir al sitio oficial "https://nodejs.org/es/", y descargar una versión estable de node js, de extensión "msi", para windows, en éste caso la cuál, ya tendrá preinstalar el "npm", ó "node package manager"
+
+	_así, procedemos ha instalar node js, como cualquier programa de windows
+
+	_para que así, al terminar la instalación el sistema se habrá instalado por defecto en la siguiente ruta: "C:\Program Files\nodejs"
+
+
+	Acceder ha Node Js:
+	___________________
+
+	_de ésta manera, luego de haber instalado node js, en nuestro sistema, debemos acceder ha éste a través, de la línea de comandos de window
+
+	_de ésta manera, a través, de la línea de comando de navegar hasta la ubicación donde se ha instalado node js, "C:\Program Files\nodejs"
+
+	_para lo cuál, lo más recomandables es navegar hasta la ruta principal ó raiz, a través, del comando:
+
+		_cd\ + enter
+
+		_para que así, el sistema vaya hasta la ruta raiz, "c:\>"
+
+	_para a continuación ir a "program files", a través, del siguiente comando:
+
+		_cd program files + enter
+
+		_para que así, el sistema vaya hasta la ruta "c:>\Program Files>"
+
+	_para a continuación ur a "nodejs", a través, del siguiente comando:
+
+		_cd nodejs + enter
+
+		_para que así, el sistema vaya hasta la ruta "c:>\Program Files\nodejs>"
+
+	_para posteriormente si poder ejecutar Node Js, ya estando en el directorio donde se ha instalado nodejs, ahora debemos abrir el archivo "node.exe", a través, del siguiente comando:
+
+		_node + enter
+
+		_para que así, el sistema nos muestre el ícono del prompt, de node ">", el cuál nos indicará que ya estamos dentro de node js, y listo para utilizar
+
+		_así, como también, podremos utilizar el comando rápido en la línea de comandos de windows, para acceder y ejecutar nodejs
+
+			_cd\
+
+				_cd program files\nodejs\node
+
+
+	Correr el servidor:
+	___________________
+
+	_y para correr el servidor vamos ha crear un archivo de prueba, el cuál, estará compuesto de un "Hola Mundo"
+
+	_para lo cuál tendremos en éste caso que crear un archivo con el siguiente contenido de ejemlo:
+
+		var http = require('http');
+		http.createServer(function (req, res) {
+		res.writeHead(200, {'content-Type': 'text/plain'});
+		res.end('Curso de Node.Js\n');
+		}). listen(3000, "127.0.0.1");
+		console.log('server running at http://127.0.0.1:3000/');
+
+	_y dicho contenido lo guardaremos en la ruta de la ubicación de instalación de nodejs, en "C:\Program Files\nodejs", y ha dicho archivo lo podemos guardar con el nombre por ejemplo de "servidor.js, y debemos de colocarle la extensión "js", ó javascript
+
+	_para posteriormente llamar ha éste archivo que hemos creado a través, del servidor de node js, el cuál será configurado por las instrucciones del archivo que vamos ha cargar
+
+	_para lo cuál, tendremos que abrir "node.exe", navegando hasta el directorio principal de "nodejs", en donde guardamos también, el archivo "servidor.js", en éste caso para pode así, acceder ha éste archivo via la línea de comandos de windows
+
+	_así, navegamos hasta la ruta de instalación de nodejs, en éste caso yendo ha:
+
+		_cd program files\nodejs>
+
+	_y allí llamamos al archivo a través, de su nombre y extensión ej:
+
+		__cd program files\nodejs> node servidor.js + enter
+
+	_para que así, si todo ha ido correctamente el sistema nos debe arrojar el siguiente mansaje
+
+		_"server running at http;//127.0.0.1:3000/"
+
+	_para que así, de ésta manera, si pegamos dicha dirección IP, y puerto podremos acceder a dicha página web, arrojada por el servido nodejs, con el siguiente mensaje en éste caso "Curso de Node.Js" el cuál, ya estará funcionando correctamente
+
+
+
+
+	-->
+</head>
+<body>
+	
+</body>
+</html>

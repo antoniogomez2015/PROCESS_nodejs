@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fontend and backend</title>
+</head>
+<body>
+
+
+<!--
+
+	Tutorial: Qué es Front-end y Backend, servidores web y clientes | https://www.youtube.com/watch?v=3yfxKZWvN8k
+
+
+
+	Flujo Web Convencional:
+	_______________________
+
+	_el cuál, está compuesto por:
+
+		_navegador
+
+			_html
+
+				_css
+
+				_javascript
+
+
+	_para que así, el navegador abra el archivo html, y dentro del html, a través, de la etiqueta ó tag, <script>, éste cargue el archivo javascript
+
+	_para que así, el navegador comience ha leer secuencialmente el texto; primero el html, y si se encuenta javascript, lo carga a continuación
+
+	_ó a través, de una función al final del código html, para se iniciará cuando se haya cargado todo el html, la cuál, cargará todo el código havascript
+
+
+
+	Conceptos Básicos:
+	__________________
+
+
+	Font-end:
+	_________
+
+	_fontend, es todo lo que corre en el navegador como javascript, html y css
+
+
+	Back-end:
+	_________	
+
+	_backend, es todo lo que corre en el servidor, como podría ser python, ruby, javascript, a través, de los diferentes frameworks, ó sistemas
+
+	_los cuáles, interactuarán con los diferentes servidores virduales ó software, y físicos ó servidores máquina, los cuáles servirán la información al frontend
+
+
+	Bases de Datos Relacionales:
+	____________________________
+
+	_la bases relacionales funcionan por ejemplo; cuando yo tengo un colegio, y el colegio tiene profesores y estudiantes
+
+	_así, de ésta manera, ahora podremos relacionar a los nombres de los profesores con un profesor específico; y todos éstos están relacionados con el colegio
+
+	_así, como también, tengo clases programadas y éstas pueden estar relacionadas con un profesor y muchos estudiantes 
+
+	_de ésta manera, prodremos ver como funcionan las bases de datos relacionales
+
+
+
+	Bases de Datos no Relacionales:
+	_______________________________
+
+	_las bases de datos no relacionales no generan vínculos entre sí, si no lo que generan son piezas de documentos
+
+	_por ejemplo cuando hemos creado un chat, en el cuál, tenemos un mensaje el cuál, dice "hola bienvenidos al chat"
+
+	_ese mensaje es un texto ó string, en la base de datos, donde éste texto estará acompañado del usuario quién lo dijo, así, como también, el avatar ó ícono del usuario, fecha, pero tamibén, podría tener estrellas y otros métodos de calificación entre otros, y éstos lo han colocado otros usuarios
+
+	_de ésta manera, las bases de datos no relacionales nos arrojarán todos éstos datos optenidos de forma sueltas ha modo de listas de los cuáles podremos acceder y hacer uso de éstos de forma independiente ó individual
+
+	_de ésta manera, podremos tener un acceso rápido y directo, en contra posición de las bases de datos relaciones las cuáles tendrán que crear todo un arbol ó estructura relacional respectiva de relacionamiento entre los actores que crearon los datos como vimos en ejemplos pasados y en la sección de bases de datos reslacionales
+
+	
+
+	Lenguajes de Backend:
+	_____________________
+
+	_los lenguajes de backend, son los lenguajes que mueven y conforman toda la tecnología detás de los sevidores de harward, ó fícos y los servidores virduales
+
+	_existen ".net", "java", "php", "ruby", "python", "nodejs"
+
+	
+	Servidores Software:
+	____________________
+
+	_éstos son piezas de software, que entienden ó interpretan la petición del navegador y envían ó devuelven lo correcto
+
+	_éstos son, uno de los servidores de software, más comúnes y extendidos en el desarrollo, los cuáles hacen la conexión ó se conectan a través, de internet por medio del puerto: 80 "http//:"
+
+		_NGINX
+
+		_APACHE
+
+		_Internet Information Server
+
+		_NODEJS
+
+	_los servidores software, disponen de una serie de puertos virtuales del sistema operativo para que en cada puerto corra un servidor diferente
+
+	_por ejemplo cuando una página web le envía un email, ha una persona éste proceso corre ó se realiza a través, del puerto 22
+
+	_cuando se realiza un conexión FTP, ésta se realiza a través, de otros puertos específicos
+
+	_cuando se realiza una video llamada ésta realiza por medio de otros puertos y de otros tipos de servidores
+
+	_entendiendo que hay servidores de correo, servidores de chat, video y straming y, para conectarse a la web convencional es a través, del puerto 80
+
+
+
+	Servidores Máquina:
+	___________________
+
+	_los servidores máquina, disponen de una serie de puertos en su interface, de red, para que así, cuando sitio web, pide ó solicita una página web, al servidor ésta se conecte al servidor a través, del puerto: "80", ó "http//:" 
+
+	_de ésta manera, cuando una página web hace una conexión con el servidor máquina, a través, del puertp "80", ó "http//:"
+
+	_para que así, el servidor máquina, verifique que servidor de software, esté disponible y corriendo para el puerto 80, ó http//:,
+
+	_y ellí donde entra uno de éstos servidores software, que presentamos previamente
+
+		_NGINX, APACHE, Internet Information Server, NODEJS
+
+
+	_de ésta manera, el servidor de software, respectivo recibe la petición realizada por la página web, y si ésta es una petición que tiene que ser procesada con bases de datos entonces éste se la manda al backend
+
+	_para que así, el backend, se conecte con la base de datos, para que luego, las bases de datos le envíen los datos requeridos nuevamente al backend pero procesados
+
+	_y el backend, le envíe esos datos requidos por el servidor y, el servidor a su vez, se los envie al navegador y por ende éstos se renderizen en el navegador y página web
+
+	_más si la petición no necesita ó requiere al backend, ó bases de datos como para cargar una ímágen por ejemplo; entonces, en éte caso el servidor software, entrará al servidor máquina, directamente y buscará en su respectivo disco duro la imágen respectiva la cuál, servirá en el navegador y página web, por ende
+
+
+
+	Stacks de Desarrollo:
+	_____________________
+
+	_Stack LAMP
+
+	_Stack, lamp, ó lampara que la mayor parte corre sobre linux
+
+	_éste es el stack, más convencional y extendido y estable actualmente
+
+		_Apache | MySql | Php
+
+
+	_Stack MEAN
+
+	_Stack, Mean, ó malo es la vanguardia del momento
+
+	_éste stack, es una de las nuevas tentencias del momento actualmente
+
+		_MongoDB | Angujar Js | Epress | Node Js
+
+		_en éste stack, "express", éste es un mini servidor de tipo "http//:", y éste hace de complemento para "nodejs", para poder ecuchar en el puerto 80, 
+
+		_de ésta manera, angujarjs, nodejs, y express, hacen lo mismo que apache y php, éstos se conectan a mondo DB, y mandan datos  al frontend
+
+		_y en el fronten, angularjs, que es una extensión de javascript, del lado del fronten que recibe esos datos respectivos y los renderiza organizada a través, del html
+
+
+
+	_Stack PRO
+
+	_Stack Pro, éste no tine nombre pero tiene altas prestaciones híbridas
+
+	_éste stack, es una de las mejores opciones y más avanzadas soluciones hoy en día
+
+		_NGINX | MySql | Python | Node Js | Mongo DB
+
+		_en éste stackm Nginx, es el serivdor de osftware, y en éste corre phyton y javascript, a través, de nodejs
+
+		_así, cuando el servidor detecta que un usuario desea hacer socket, con nodejs, entonces entonces Nginx, los conexta con nodejs
+
+		_más cuando el servidor detecta que un usuario desea abrir algo normal de http//:, entonces los relacíona con django, y con python
+
+		_de ésta manera, python, se conecta con MySql, que es nuestra base de datos relacional donde están los pagos de los cursos, los usuarios, ect
+
+		_mientras que nodejs, se conecta con mongo DB, que es nuestra base de datos no relacional en la cuál, están los archivos y el chat, dinámico
+
+
+	_Stack Drone Mimificada:
+
+	_éste stack, es para aplicaciones expeciales como para hacer volar un drone,  ó hacer funcionar un robot, u otras operaciones
+
+		_Expreess | Node Js | JS
+
+
+
+
+
+	Métodos de conexión entre el frontend, y el backend:
+
+	_ésto es posibles a través, de los métodos
+
+		_GET()
+
+		_POST()
+
+		_AJAX
+
+		_SOCKETS 
+
+	_y es a través, de éstos cuatro métodos que podremos conextacrnos a un servidor
+
+	_éstos métodos son independientes y transparentes en relación ha que corre del lado del cliente y del lado del servidor
+
+	_así, el método "_GET()", enviará variables vía la url, del navegador
+
+	_mientras que el método "_POST()", a través, de los meta tags, ó header, de la petición 
+
+	_y a través, del métod "AJAX", podremos hacer lo mismo que con el método _post, pero sin la necesidad de tener que refrescar la página web, para representar los cambios realizados sino que éstos se realizarán de forma asíncrona
+
+	_y a través, de javacript, ajax, enviará un archivo de tipo "Json", con los datos de la imágen y demás elementos solicitados por la página web, específica sin la necesidad de tener que refrescar la página web, respectiva
+
+
+	_más el método de "SOKETS", nos permitirán mantener un conexión viva ó constante entre el navegador y el servidor
+
+
+
+
+-->
+
+	
+</body>
+</html>

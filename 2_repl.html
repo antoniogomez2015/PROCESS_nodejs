@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Js</title>
+
+	<!--
+
+	Curso de node.js (30 Videos) | https://www.youtube.com/playlist?list=PL38CA7BD8CB5F3FF9
+
+	Tutorial: 02.- Curso de node.js. Node Interactivo con REPL | https://www.youtube.com/watch?v=sgiNp1EQsIM&list=PL38CA7BD8CB5F3FF9&index=2
+
+	Ttorial: 03.- Curso de Node.js. Atajos de teclado y comandos de REPL. | https://www.youtube.com/watch?v=vgqplrQg-z4&index=3&list=PL38CA7BD8CB5F3FF9
+
+
+	Página Oficial: 
+
+		https://nodejs.org/es/
+
+		Acceder ha Nodejs
+
+			cd\
+
+				cd program files\nodejs\node
+
+
+
+
+	Repl:
+	_____
+
+		_repl, documentación:
+
+			_"https://nodejs.org/api/repl.html"
+
+		_Tutorial:
+
+			_"https://www.tutorialspoint.com/nodejs/nodejs_repl_terminal.htm"
+
+
+	_Repl,  permite un sistema automatizado de código con nodejs, de ésta manera, repl, nos permitirá probar código personalizado de módulos personalizados y demás elementos de nodejs
+
+	_de ésta manera, nodejs, incopora un componente interactivo, éste es repl, el cuál, nos evitará tener que estar escribiendo código javascript, en un archivo y posteriormente ejecutarlo con nodejs, para poder probarlo
+
+	_así, repl, hace referencia ha "Read Eval-Print-Loop",
+
+	_repl, soporta un estilo de "Emmac", simplificado en línea y un pequeño grupo de comandos básicos
+
+	_de ésta manera, todo lo que escribiésemos en repl, se reproduciría y compilaría como si lo escribiésemos en javascript, normal y leugo lo ejecutásemos con nodejs, pero en repl, sería de forma automática
+
+	_de esta manera, podríamos utilizar repl, para crear toda nuestra aplicación y a su vez, testarla al tiempo de la vamos creando al vuelo
+
+	
+
+
+	Entrar en Modo Repl:
+
+	_y para entrar en modo repl, desde nodejs, lo único que tenemos que hacer es escribir el siguiente comando "node", + enter
+
+	_de ésta manera, cuando entramos en modo repl, entraremos en modo procesado con el modo "V8", de javascript, de google chrome
+
+	_para lo cuál, debemos abrir la línea de comandos de windows, y de ésta manera, al tener indicada la variable de entorno de nodejs, en el sistema ahora podremos acceder desde cualquier ruta y lugar del sistema
+
+	_lo que quiere de decir que ahora desde la la consola ó línea de comandos de windows, ahora podremos acceder ha nodejs, de forma directa, no teniéndo así, que navegar previamente hasta la ruta ó directorio donde se encuentra el ejecutable de "node.exe"
+
+	_de ésta manera, ahora podremos acceder ha nodejs, de la siguiente manera, para entrar así, en el modo "repl"
+
+		_c:\Users\mono>
+
+	_de ésta manera, ahora sólo debemos esbribir el comado "node" + enter, para entrar en el modo "repl", para que así, el sistema nos muestre el ">", "prompt", de nodejs, el cuál nos indicará que ya estamos bajo el entorno del motor "V8", de javascript
+
+		_>
+
+	_de ésta manera, ahora podremos escribir y hacer todas las operaciones javascript, de forma normal para estructurar nuestro programa javascript
+
+	_de ésta manera, la herramienta repl, lo que hace es imprimir en pantalla el resultado de cualquier expresión que vayamos escribiendo
+
+
+
+	Funciones del Prompt de Repl:
+
+	_para acceder a la expresión anterior y hacer referencia ha ésta en el prompt, de repl, ej:
+
+		>b = 5;
+
+	_podemos hacer uso de "_", ó  "underscope", el cuál, hara referencia a la sentencia anterior ó cualquier parte de ésta la cuál, podremos ahora utilizarla en conjunto con la siguiente expresión ó sentencia, ej:
+
+		>_ + 5;
+
+		6
+
+	_de ésta manera, el ejemplo de arriba nos arrojará como resultado el valor de "6", de ésta maenra, el sistama habrá hecho uso de la expresión ó sentencia anterior para realizar la operación aritmética ó matermática de form satisfactoria
+
+
+
+	Salir del Modo Repl:
+
+	_para lo cuál, debemos tipear el siguiente comando "Control + C", para que así, el sistema nos muestre en pantalla el siguiente mensaje de confirmación "(C again to quit)", y para salir debemos de volver a darle ha "Control + C", y un comando directo para salir de repl, es "Control + D"
+
+	_para que así, el sistema nos devuelva el punto anterior de antes de entrar ha repl
+
+	_más para ejecutar cualquier archivo que hayamos guardado "nombre.js", con repl, si tendremos que navegar hasta la ruta donde hemos guardado éste respectivo archivo, por lo genera será la misma ruta de instalación de nodejs
+
+
+
+	Lenguaje Repl/Javascript:
+
+	_tenemos que aprender ha interpretar ó a pensar en lenguaje máquina por lo cuál, debemos entender que el sistema interpretará el código línea a línea y de izquierda ha derecha, ej:
+
+		>3>2>1;
+
+		>false
+
+	_de ésta manera, podremos ver que el anterior ejemplo nos arrojará un valor falso ó "false", lo cuál, es verdadero ó "true"
+
+	_y ésto es por que el sistema primero evaluará la primera opración y justo a continuación arrojará un resultado de ésta, antes de realizar ó ejecutar la siguiente operación ej:
+
+		_>3>2;
+
+		>true>1;
+
+		>false
+
+	_así, podremos ver que lo que ocurre es lo siguiente; que al terminar la primera operación el sistema cotinuará con la siguiente operación más ésta tomará el valor de la primera operación a través, del cuál, realizará la segunda operación
+
+	_y como prodremos ver los elemento no son compatibles y por ende no arroja un resultado incorrecto, en éste caso "false", por que "true", no es mayor que "1", ya que ambos tipos de elemento ó valores no pueden compararse por que no son valores del mismo tipo
+
+	_ya que en éte caso "true", es un valor booleano y equivale a "1", ó verdadero
+
+
+
+	Repl MultiLínea:
+
+	_de ésta manera, para hacer expresiones complejas repl, dispone de la creación de estructuras multilínea
+
+	_para lo cuál hace uso de "...", puntos seguidos para indicarnos que estamos dentro de una operación, de ésta manera, podremos expresar por ejemplo; un condicional if(){}
+
+		>if(){
+		........alert()
+		--------}
+		........
+
+	_así, como también, para salir del modo multilínea dispondremos de dos comandos los cuáles son: ".break ", y ".clear", lo cuál, nos devolverá al modo ">", prompt, convencional de repl
+
+
+
+
+	Repl Información:
+
+	_así, como también, podremos optener información de cualquier elemento como ejemplo escribiéndo la siguiente expresión:
+
+		>console.log(global) + enter
+
+	_como también, podríamos escribir la misma sentencia de la siguiente manera:
+
+		>gl = global + enter
+
+
+
+	Repl Navegación:
+
+	_así, como también, podremos navegar entre las diferentes sentencias y expresiones que hemos realizado para así, podamos hacer revisiones y correcciones sobre la marcha así, como también, para la reutilización de código
+
+	_para lo cuál, debemos de hacer uso de las arrows, ó flechas del teclado, tanto arriba/abajo, como derecha/izquierda
+
+
+
+	Repl Comandos:
+
+	_así, como también, para repl, dispondremos de comandos para las acciones más comúnes
+
+		_salir de repl, con confirmación: "Control + C" / "Control + C"
+
+		-salir de repl, sin confirmación: "Control + D"
+
+		_autocompletar variables locales y globales: "tabulador"
+
+		_salvar las entradas a la sesión actual: ".save" + name + extension (.js)
+
+			_el archivo se salvará en la ruta en donde nos encontremos
+
+				>.save miArchivo.js + enter
+
+		_cargar archivos .js, dentro del repl: ".load"
+
+			_y para cargar archivos previamente guardados podremos hacerlo
+
+				>.load miArchivo.js + enter
+
+				_de ésta manera, nos cargará la seción de scripts, guardada
+
+		_reinicia la entrada multilínea, se pierde el contenido anterior: ".break"
+
+		_resetea el contexto actual, actúa como un reinicio: ".clear"
+
+		_para salir de repl: ".exit"
+
+		_mostrar todos los comandos disponibles: ".help"
+
+		_
+
+
+
+
+
+
+	-->
+</head>
+<body>
+	
+</body>
+</html>

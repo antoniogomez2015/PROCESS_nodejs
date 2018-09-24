@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Js</title>
+
+	<!--
+
+	Curso de node.js (30 Videos) | https://www.youtube.com/playlist?list=PL38CA7BD8CB5F3FF9
+
+	Ttorial: 03.- Curso de Node.js. Atajos de teclado y comandos de REPL. | https://www.youtube.com/watch?v=vgqplrQg-z4&index=3&list=PL38CA7BD8CB5F3FF9
+
+
+	Página Oficial: 
+
+		https://nodejs.org/es/
+
+		Acceder ha Nodejs
+
+			cd\
+
+				cd program files\nodejs\node
+
+
+
+
+	Repl Personalizado:
+	____________________
+
+		_repl, documentación:
+
+			_"https://nodejs.org/api/repl.html"
+
+		_Tutorial:
+
+			_"https://www.tutorialspoint.com/nodejs/nodejs_repl_terminal.htm"
+
+
+	_así, como también, podremos hacer versiones de repl, personalizadas 
+
+
+
+	Módulo Repl:
+
+	_para lo cuál, debemos llamar al módulo de repl, y guardar éste en una variable para su fácil acceso
+
+		>var repl = require("repl") + enter
+
+		_de ésta manera, el sistema nos devolverá el valor de "undefined"
+
+	_y para crear un nuevo repls, debemos llamar al método "start", desde el objeto repel, el cuál, ya hemos llamado en la sentencia anterior
+
+		>repl.start("") + enter
+
+	_para que así, un nuevo repl, sea creado, borrando todas las expresiones y rastro del repl, inicial u original
+
+	_para que así, el sistema nos muestre un sumario de todos los componentes del nuevo repl, ó la nueva sesión de repl
+
+	_y ésta sesión será idéntica a la sesión anterior ya que no hemos personalizada nada aún, porque en el momento de su creación no le pasamos ningún parámetro de configuración
+
+	_y ésta sería un ejemplo de la sintaxis completa del objeto repl:
+
+		_repl.start([prompt], [stream], [eval], [useGlobal], [ignoreUndefined]);
+
+	_de ésta manera, podremos que al objeto "repel", se le pueden pasar conco parámetros diferentes
+
+	_de ésta manera, todos los parámetros de éste objeto repl, son opcionales así que si nos los proveemos se asignará el valor defecto para cada uno de éstos
+
+
+
+	Parámetros Repl.Start():
+
+	_de ésta manera, el objeto "start()", contempla cinco parámetros los cuales son:
+
+		_prompt: valor por defecto: ((>))
+
+		_stream: valor por dfecto: process.stdin
+
+		_eval: valor por defecto: contenedor async
+
+		_useGlobal: valor por defecto; "false", éste inicia un nuevo contexto en lugar de usar el contexto global
+
+		_ignoreDefined: valor por defecto: "false", no ignora las respuestras undefined
+
+
+	Archivo para Personalizar Repl:
+
+	_éste es un archivo de ejemplo a través, del cuál, podremos personalizar repl, cambiando el "prompt", solamente
+
+
+		repl = require("repl");
+
+		//iniciar REPL con un prompt distinto u con el parámetro ignoreUndefined configurado a true
+
+		repl.start("node personalizado> ", null, null, null, true);
+
+
+	_de ésta manera, guardamos éste archivo en la estructura y ruta de nodejs, con el nombre por ejemplo de repl.js
+
+	_para a continuación llamar ha éste repl, personalizado para su uso para lo cuál, tendremos que navegar hasta la estructura de archivos donde hemos guardado el archivo "repl.js", personalizado que hemos creado, yendo ha:
+
+		_cd\ + enter
+
+		_cd program files\nodejs + enter
+
+	_para a continuación llamar al archivo "repl.js", a través, del comando "node repl.js"
+
+		c:\ program files\nodejs> node repl.js + enter
+
+	_para que se cargue el nuevo repl, personalizado, y en éste caso siguiente el ejemplo anterior podremos ver que ahora el prompt, estará personalizado el dira ahora:
+
+		_node personalizado>
+
+	_así, tampoco aparecerán los "indefined", sino que aparecerá un valor de "true/1"
+
+
+	Repl String
+
+	_así, como también, podremos personalizar sus atributos de string, creando mútilples versiones de repls, para acceder posteriormente ha ellas
+
+	_desde la versión original hasta los distintos sockets, que vayamos creando
+
+	_y en éste caso estareos cargando el módulo "net"
+
+
+		_var repl = require("repl"),
+		net = require("net");
+
+		//start REPL with ignoreUndefined set to true
+
+		repl.start("node personalizado> ", null, null, null, true);
+
+		net.createServer(function (socket) {
+
+			repl.start("node via TCP socket> ", socket);
+	
+		}).listen(8124);
+
+	_éste archivo lo guardamos por ejemplo con el nombre de "socket.js"
+
+	_para luego llamar ha éste archivo de igual manera que hicimos con el ejemplo anterior; yendo hasta la ruta donde se encuentra el archivo y llamando éste "node socket.js", + "enter"
+
+
+
+	Repl Load Modules:
+
+	_así, como también, podremos hacer versiones de sockets, de repl, más complejas a través, de las cuáles podremos hacer aplicaciones completas, en éste caso vamos ha integrar la carga de módulos "http, util, os" en el momento de llamar ha nuestro repl, personalizado
+
+	_var repl = require("repl");
+	var context = repl.start(">>", null, null, null, true).context;
+	//preload in modules
+	context.http = require("http");
+	context.util = require("util");
+	context.os = require("os");
+
+	_y éste archivo lo podremos guardar por ejemplo con el nombre de "preload.js"
+
+	_para posteriormente llamar ha éste archivo yendo hasta la ruta donde hemos guardado éste y llamarlo a través, del comando "node preload.js" + "enter", como hemos hecho en ejemplo anteriores
+
+	_de ésta manera, ya podremos utilizar los diferentes métodos correspondientes los módulos precargados ej:
+
+		_>>os.hostname() + enter
+		'tony'
+
+		_>>util.log('mensaje') + enter
+		25 De 12:00:08 - mensaje
+
+		_>>
+
+	_así, podremos ver como podemos utilizar haroa el los módulos "util" y sus respectivos métodos "log()"
+
+
+
+
+
+
+
+
+
+	-->
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Js</title>
+
+	<!--
+
+	Curso de node.js (30 Videos) | https://www.youtube.com/playlist?list=PL38CA7BD8CB5F3FF9
+
+	Ttorial: 04.- Curso de Node.js. El Core de Node | https://www.youtube.com/watch?v=OzAr93aAzK8&list=PL38CA7BD8CB5F3FF9&index=4
+	
+
+	Página Oficial: 
+
+		https://nodejs.org/es/
+
+		Acceder ha Nodejs
+
+			cd\
+
+				cd program files\nodejs\node
+
+
+
+
+	Node Core:
+	__________
+
+		_el node core, es el núcleo de node, y es una api, que nos provee con gran parte  la funcionalidad necesaria para construir aplicaciones node		
+
+
+	Objeto Process:
+	_______________
+
+	_cada aplicación nodejs, es una instancia de un objeto "process node", y llega ya con una serie de propiedades preconstruidas
+
+	_muchos de los métodos y propiedades del objeto process, proceen información ó identificación sobre la aplicación y su entorno
+
+	_a continuación se enuncian algunos de los métodos más utilizados del objeto process:
+
+		_.execPath
+
+			_éste devuelve la ruta de ejecución para la aplicación node
+
+		_.version
+
+			_éste nos provee la versión de nodejs, que estamos utilizando
+
+		_.platform
+
+			_éste identifica la plataforma del servidor
+
+		_.stdin
+
+			_éste indica "string in"
+
+		_.stdout
+
+			_éste indica "string out"
+
+		_.stderr
+
+			_éste indica que es un "string", síncrono y de bloqueo
+
+		_.memoryUsage
+
+		_.nextTick
+
+
+	Implementación del Objeto Process y sus Métodos:
+
+	_para implementar ó utilizar el objeto Process, debemos hacerlo a través, de repl, de la siguientes manera
+
+		_>process..execPath + enter  | >console.log(process.execPath) + enter
+
+
+
+	_para que así, node nos muestre la ruta donde se encuentra nodejs, en éste caso es:
+
+		_'c:\\Program Files\\nodejs\\node.exe'
+
+
+	_otro ejemplo:
+
+		_>console.log(process.version) + enter
+
+	_para que así, el sistema nos arroje la versión de nodejs, instalada en éte caso la versión es;
+
+		v0.10.19
+
+	_otro ejemplo:
+
+		_>console.log(process.platform) + enter
+
+	_para que así, el sistema nos arroje la versión de windows, utilizada por nodejs, en éste caso es:
+
+		win32
+
+
+
+	.Stdin y .Stdout:
+
+	_string in/out, "std-in/out", éstos son asíncronos y en éstos tanto se puede leer como 
+	escribir
+
+	_de ésta manera, lo que hará nodejs, será escuchas los datos a través, de éstos métodos del objeto process
+
+	_el siguiente ejemplo nos permitirá escribir y leer datos a través, de los métodos 
+	"std in/out"
+
+	_y posteriormente nodejs, repetirá éstos datos obtenidos a través, de los métodos 
+	"std in/out", para imprimirlos en pantalla posteriormente
+
+	_el siguiente módulo lo guardaremos con el nombre de echo.js, para llamar ha éste posteriormente
+
+
+		>process.stdin.resume();
+		processs.stdin.on('data', function (chunk){
+			process.stdout.write('data: ' + chunk);
+		}
+
+
+	_entendiendo así, que el método "stdin", está pausado por defecto por lo cuál, tendremos que hacer una llamada a la función "resume()", para que se inicialize el método "stdin"
+
+	_y las demás sentencias permitirán capturar la acción del usuario para luego imprimir ésta en pantalla a través, de repl
+
+
+		>node echo.js + enter
+
+
+	_de ésta manera, al llamar al fichero que hemos creado con las funciones stdin/out, nodejs, a través, del módulo process, estará pendiente de lo que vayamos escribiéndo para posteriormente el sistema vaya repitiendo éstos elementos ha modo de "echo"
+
+	_así, con los métodos std-in, lee lo que escribimos y ocn std-out, no debuelve el mismo elementos en pantalla
+
+
+
+	.memoryUsage:
+
+	_éste nos indica cuanta memoria está utilizando la aplicación y puede ser util para confirmaciones de rendimiento y nodejs, y de una aplicación en específico
+
+	_para lo cuál, debemos estar dentro de una aplicación como hicimos en el paso anterior 
+	">node echo.js + enter", y estando allí, dentro de ésta podemos tipear el siguiente código para ver el estado de la memorio a través, del método "process.memoryUsage()", ej:
+
+		_c:\program files\nodejs>process.memoryUsage() + Enter
+
+	_para que así, node nos arroje la cantidad de momoria utilizada
+
+		_{rss: 8626176,
+		heapTotal: 2378368,
+		heapUse: 1728428}
+
+
+
+	.nextTick:
+
+	_éste nos permitirá retrazar una función por alguna razón pero asícronamente
+
+	_el cuál, debemos de llamar de la misma manera, de los métodos anteriores:
+
+		_c:\program files\nodejs>process.nextTick() + Enter
+
+
+
+	.buffer:
+
+	_la clace buffer, es un modo de manejar datos binarios en nodejs,  así, podremos por ejemplo convertir un string, en un buffer, el cuál, podrá convertirse a su vez, en datos binarios
+
+	_y las diferentes codificaciones posibles para strings, capturados por un buffer, son las siguientes:
+
+		_ascii
+
+			_éste convirte la codificación de 7 bits
+
+		_utf8
+
+			_éste es el unicode multibites
+
+		_usc2
+
+			_éste es el unicode lidel, que sólo ocupal 2 bites
+
+		_base64
+
+			_indeterminado
+
+		_hex
+
+			_éste codifica cada bits, como dos caracteres exadecimales
+
+	_todas éstas especificaciones podemos pasarlas como parámetros cuando estamos utilizando "buffer"
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	-->
+</head>
+<body>
+	
+</body>
+</html>

@@ -4,7 +4,7 @@
 NPM Init:
 _________
 
-_cuando tenemos instalado una gran cantidad de módulos dentro de nodejs, en nuestro proyecto es preciso tener una hola de ruta de instalación a la hora de migrar nuestro proyecto a otro computador ó servidor remoto
+_cuando tenemos instalado una gran cantidad de módulos dentro de nodejs, en nuestro proyecto es preciso tener una hoja de ruta de instalación a la hora de migrar nuestro proyecto a otro computador ó servidor remoto
 
 _para que así, en ese otro sistema ó computador se puedan replicar todos los módulos que teníamos instanado en nuestro equipo y proyecto para que así, el proyecto funcione correctamente
 
@@ -36,7 +36,7 @@ _para que así, inicialize un wizard, de preguntas las cuáles, configurarán el
     _Lisence: por lo general ésta opción se deja vacia
 
 
-_de ésta manera, npm, nos lostará las opciones que hemos rellenado y nos preguntará si todo está correcto, y si indicamos que "Yes"
+_de ésta manera, npm, nos listará las opciones que hemos rellenado y nos preguntará si todo está correcto, y si indicamos que "Yes"
 
 _para que así, npm, a partir de éste punto cree un objeto json, en el cuál, estarán todas las indicaciones que hemos indicado en el wizard, anterior con el nombre de:
 
